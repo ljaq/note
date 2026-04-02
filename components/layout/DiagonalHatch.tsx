@@ -1,11 +1,11 @@
 /** 45° 斜线底纹（pattern 8×8 + rotate(45) + line stroke 1.5） */
 export function DiagonalHatch({
-  className = "",
-  patternId = "diagonal-hatch",
+  className = '',
+  patternId = 'diagonal-hatch',
 }: {
-  className?: string;
+  className?: string
   /** 同页多实例时需唯一 id */
-  patternId?: string;
+  patternId?: string
 }) {
   return (
     <svg
@@ -13,24 +13,11 @@ export function DiagonalHatch({
       aria-hidden
     >
       <defs>
-        <pattern
-          id={patternId}
-          width="8"
-          height="8"
-          patternUnits="userSpaceOnUse"
-          patternTransform="rotate(45)"
-        >
-          <line
-            x1="0"
-            y1="0"
-            x2="0"
-            y2="8"
-            stroke="currentColor"
-            strokeWidth="1.5"
-          />
+        <pattern id={patternId} width='8' height='8' patternUnits='userSpaceOnUse' patternTransform='rotate(45)'>
+          <line x1='0' y1='0' x2='0' y2='8' stroke='currentColor' strokeWidth='1.5' />
         </pattern>
       </defs>
-      <rect width="100%" height="100%" fill={`url(#${patternId})`} />
+      <rect width='100%' height='100%' fill={`url(#${patternId})`} />
     </svg>
-  );
+  )
 }

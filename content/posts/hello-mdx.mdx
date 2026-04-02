@@ -1,7 +1,7 @@
 ---
 title: 用 MDX 写第一篇博客
 description: 说明本站如何预渲染 MDX 与通用组件结构。
-date: "2026-03-15"
+date: '2026-03-15'
 tags:
   - Next.js
   - MDX
@@ -17,7 +17,7 @@ tags:
 
 ```ts
 export async function generateStaticParams() {
-  return getPostSlugs().map((slug) => ({ slug }));
+  return getPostSlugs().map(slug => ({ slug }))
 }
 ```
 
