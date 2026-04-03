@@ -32,7 +32,7 @@ export default async function BlogPostPage({ params }: Props) {
       <ContentBleedSection bleed='both'>
         <header className='relative mb-12 pb-10'>
           <SectionLabel index='01'>文章</SectionLabel>
-          <h1 className='mt-4 text-4xl font-semibold leading-tight tracking-tight text-ink md:text-5xl'>
+          <h1 className='mt-4 break-words text-4xl font-semibold leading-tight tracking-tight text-ink md:text-5xl'>
             {frontmatter.title}
           </h1>
           <BleedRule className='mt-6' />

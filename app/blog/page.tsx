@@ -18,7 +18,7 @@ export default function BlogIndexPage() {
       <ContentBleedSection bleed='both'>
         <SectionLabel index='01'>blog</SectionLabel>
         <ContentBleedSection bleed='both' className='mt-14'>
-          <h1 className='text-4xl font-semibold tracking-tight text-ink md:text-5xl'>文章</h1>
+          <h1 className='break-words text-4xl font-semibold tracking-tight text-ink md:text-5xl'>文章</h1>
         </ContentBleedSection>
         <p className='mt-4 max-w-xl text-ink/70'>
           源文件为 MDX，构建时静态生成；支持 frontmatter 与 GitHub Flavored Markdown。

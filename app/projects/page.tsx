@@ -17,7 +17,7 @@ export default function ProjectsPage() {
     <SiteShell>
       <ContentBleedSection bleed='both'>
         <SectionLabel>projects</SectionLabel>
-        <h1 className='mt-4 text-4xl font-semibold tracking-tight text-ink md:text-5xl'>项目</h1>
+        <h1 className='mt-4 break-words text-4xl font-semibold tracking-tight text-ink md:text-5xl'>项目</h1>
         <p className='mt-4 max-w-xl text-ink/70'>每个项目对应 `content/projects` 下的一篇 MDX，可写长文与代码块。</p>
 
         <div className='mt-12 grid gap-8 md:grid-cols-2'>

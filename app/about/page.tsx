@@ -7,7 +7,7 @@ export default function AboutPage() {
     <SiteShell>
       <ContentBleedSection bleed='both'>
         <SectionLabel index='01'>resume</SectionLabel>
-        <h1 className='mt-4 text-4xl font-semibold tracking-tight text-ink md:text-5xl'>关于我</h1>
+        <h1 className='mt-4 break-words text-4xl font-semibold tracking-tight text-ink md:text-5xl'>关于我</h1>
         <p className='mt-4 max-w-2xl text-lg leading-relaxed text-ink/75'>
           在这里替换为你的经历、教育背景与联系方式。布局沿用站点统一的「手绘边框 + 点阵纸」语言。
         </p>

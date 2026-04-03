@@ -19,12 +19,12 @@ export const mdxComponents: MDXComponents = {
   li: props => <li className='leading-relaxed' {...props} />,
   strong: props => <strong className='font-semibold text-accent-red' {...props} />,
   blockquote: props => (
-    <blockquote className='border-l border-[color:var(--grid-border-color)] pl-4 italic text-neutral-600' {...props} />
+    <blockquote className='border-l border-[color:var(--grid-border-color)] pl-4 italic text-muted-foreground' {...props} />
   ),
   code: props => <code className='rounded bg-ink/6 px-1.5 py-0.5 font-mono text-[0.9em] text-ink' {...props} />,
   pre: props => (
     <pre
-      className='mb-4 max-w-full overflow-x-auto border border-[color:var(--grid-border-color)] bg-neutral-100 p-4 font-mono text-sm'
+      className='mb-4 max-w-full min-w-0 overflow-x-auto border border-[color:var(--grid-border-color)] bg-muted p-3 font-mono text-[0.8125rem] leading-relaxed sm:p-4 sm:text-sm'
       {...props}
     />
   ),

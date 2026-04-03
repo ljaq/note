@@ -4,10 +4,12 @@ const base =
   'inline-flex items-center justify-center border px-5 py-2.5 text-sm font-semibold transition select-none'
 
 const variants = {
-  primary: 'border-neutral-900 bg-accent-magenta text-white shadow-sketch hover:bg-accent-magenta/90 active:shadow-none',
-  outline: 'border-[color:var(--grid-border-color)] bg-white text-neutral-900 hover:bg-neutral-100 active:bg-neutral-200',
+  primary:
+    'border-[color:var(--ink)] bg-accent-magenta text-white shadow-sketch hover:bg-accent-magenta/90 active:shadow-none',
+  outline:
+    'border-[color:var(--grid-border-color)] bg-card text-foreground hover:bg-muted active:bg-muted/80',
   ghost:
-    'border-transparent bg-transparent text-neutral-800 underline decoration-dotted decoration-neutral-400 underline-offset-[5px] hover:decoration-accent-magenta',
+    'border-transparent bg-transparent text-foreground underline decoration-dotted decoration-muted-foreground/60 underline-offset-[5px] hover:decoration-accent-magenta',
 } as const
 
 export type ButtonVariant = keyof typeof variants

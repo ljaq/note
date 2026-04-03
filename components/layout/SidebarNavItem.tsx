@@ -18,9 +18,9 @@ export function SidebarNavItem({ href, icon, children }: SidebarNavItemProps) {
     <GridFrame active={active} hover className={`border-l-0 border-r-0 m-0 ${href === '/blog' ? 'border-b' : 'border-b-0'}`}>
       <Link
         href={href}
-        className='flex items-center gap-3 px-3 py-2.5 text-[13px] font-medium text-neutral-800 transition hover:text-neutral-950'
+        className='flex items-center gap-3 px-3 py-2.5 text-[13px] font-medium text-foreground transition hover:text-foreground'
       >
-        <span className='text-neutral-500 [&>svg]:stroke-[1.35]'>{icon}</span>
+        <span className='text-muted-foreground [&>svg]:stroke-[1.35]'>{icon}</span>
         <span>{children}</span>
       </Link>
     </GridFrame>

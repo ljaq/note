@@ -1,22 +1,33 @@
 'use client'
 
+import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 import { DiagonalHatch } from './DiagonalHatch'
 import { SidebarMeta } from './SidebarMeta'
 import { SketchDivider } from './SketchDivider'
 import { SidebarNavItem } from './SidebarNavItem'
 import { SiteLogo } from './SiteLogo'
 import { SocialSketchGrid } from './SocialSketchGrid'
-import { IconArticle, IconFolder, IconHome, IconUser } from '@/components/icons/NavIcons'
 import { SidebarClock } from './SidebarClock'
 import { FolderTwoTone, HomeTwoTone, IdcardTwoTone, ProfileTwoTone } from '@ant-design/icons'
 import { SectionLabel } from '../ui'
+import { ThemeToggle } from '@/components/theme/ThemeToggle'
+
+const ICON_TONE_LIGHT: [string, string] = ['#171717', '#e8e8e8']
+const ICON_TONE_DARK: [string, string] = ['#e8e8e8', '#525252']
 
 export function SiteSidebar() {
+  const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => setMounted(true), [])
+  const tone = mounted && resolvedTheme === 'dark' ? ICON_TONE_DARK : ICON_TONE_LIGHT
+
   return (
     <aside
-      className='z-30 hidden min-h-0 w-[260px] flex-col overflow-hidden border-x border-[color:var(--grid-border-color)] bg-[#f7f7f7] md:fixed md:top-0 md:left-4 md:flex md:h-[100dvh] md:max-h-[100dvh] md:overflow-y-auto md:overscroll-y-none lg:left-[calc(50vw-28rem)]'
+      className='relative z-30 hidden min-h-0 w-[260px] flex-col overflow-hidden border-x border-[color:var(--grid-border-color)] bg-[color:var(--site-bg)] md:fixed md:top-0 md:left-4 md:flex md:h-[100dvh] md:max-h-[100dvh] md:overflow-y-auto md:overscroll-y-none lg:left-[calc(50vw-28rem)]'
       aria-label='站点侧栏'
     >
+      <ThemeToggle className='absolute right-3 top-3 z-20' />
       <DiagonalHatch patternId='sidebar-hatch' />
       {/* 极轻点阵叠在斜线上 */}
       <div className='dot-grid-sidebar pointer-events-none absolute inset-0 z-[1] opacity-[0.35]' aria-hidden />
@@ -25,16 +36,16 @@ export function SiteSidebar() {
 
         <SectionLabel className='mt-16'>navigation</SectionLabel>
         <nav className='flex flex-col' aria-label='主导航'>
-          <SidebarNavItem href='/' icon={<HomeTwoTone twoToneColor={['#000', '#eaeaea']} />}>
+          <SidebarNavItem href='/' icon={<HomeTwoTone twoToneColor={tone} />}>
             主页
           </SidebarNavItem>
-          <SidebarNavItem href='/about' icon={<IdcardTwoTone twoToneColor={['#000', '#eaeaea']} />}>
+          <SidebarNavItem href='/about' icon={<IdcardTwoTone twoToneColor={tone} />}>
             简历
           </SidebarNavItem>
-          <SidebarNavItem href='/projects' icon={<FolderTwoTone twoToneColor={['#000', '#eaeaea']} />}>
+          <SidebarNavItem href='/projects' icon={<FolderTwoTone twoToneColor={tone} />}>
             项目作品
           </SidebarNavItem>
-          <SidebarNavItem href='/blog' icon={<ProfileTwoTone twoToneColor={['#000', '#eaeaea']} />}>
+          <SidebarNavItem href='/blog' icon={<ProfileTwoTone twoToneColor={tone} />}>
             文章
           </SidebarNavItem>
         </nav>

@@ -13,7 +13,7 @@ export default function HomePage() {
       <SectionLabel index='01'>home</SectionLabel>
       <ContentBleedSection bleed='both' className='mb-12 md:mb-16'>
         <GridFrame className='p-0 overflow-hidden border-0'>
-          <AsciiFramePlayer className='font-mono text-sm text-neutral-500 whitespace-pre-wrap leading-none text-center' />
+          <AsciiFramePlayer className='font-mono text-sm text-muted-foreground whitespace-pre-wrap leading-none text-center' />
         </GridFrame>
         <BleedRule />
         <h1 className='mt-10 px-1 max-w-2xl text-3xl font-semibold leading-snug tracking-tight text-ink md:text-[2.35rem] md:leading-tight'>
@@ -30,7 +30,7 @@ export default function HomePage() {
           />
         </h1>
         <BleedRule />
-        <p className='mt-4 px-1 max-w-xl text-lg text-ink/80 text-justify'>
+        <p className='mt-4 max-w-xl px-1 text-lg text-ink/80 text-pretty sm:text-justify'>
           多年前端/全栈开发经验，具备独立负责大型项目、进行技术选型和架构设计的能力。
         </p>
         <div className='mt-8 flex flex-wrap gap-3 transform translate-y-px'>

@@ -31,11 +31,11 @@ export function SidebarClock() {
 
   return (
     <div className='mt-12'>
-      <span className='font-mono text-[10px] uppercase tracking-wider text-neutral-400 h-0 flex items-end'>time</span>
+      <span className='font-mono text-[10px] uppercase tracking-wider text-muted-foreground h-0 flex items-end'>time</span>
       <SketchDivider />
       <div className='flex items-center justify-between gap-2 mt-2 px-4'>
-        <span className='font-mono text-[11px] tabular-nums tracking-tight text-neutral-800'>{date || '—-—-—'}</span>
-        <span className='font-mono text-[11px] tabular-nums tracking-tight text-neutral-500'>{time || '—:—:—'}</span>
+        <span className='font-mono text-[11px] tabular-nums tracking-tight text-foreground'>{date || '—-—-—'}</span>
+        <span className='font-mono text-[11px] tabular-nums tracking-tight text-muted-foreground'>{time || '—:—:—'}</span>
       </div>
     </div>
   )
