@@ -1,6 +1,6 @@
 'use client'
 
-import { ThemeToggle } from '@/components/theme/ThemeToggle'
+import { ThemeSelect } from '@/components/theme/ThemeSelect'
 import { NavLink } from '@/components/ui'
 import { SiteLogo } from './SiteLogo'
 
@@ -18,7 +18,7 @@ export function MobileBar() {
         <div className='min-w-0 flex-1'>
           <SiteLogo />
         </div>
-        <ThemeToggle className='shrink-0' />
+        <ThemeSelect className='shrink-0' triggerClassName='min-w-[7.5rem] max-w-[7.5rem]' />
       </div>
       <nav
         className='flex gap-1 overflow-x-auto px-3 pb-3 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden'

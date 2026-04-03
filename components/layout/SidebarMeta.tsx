@@ -1,39 +1,16 @@
 'use client'
 
-import { SidebarClock } from './SidebarClock'
+import { ThemeSelect } from '@/components/theme/ThemeSelect'
 
-/** 底部设置区：跟随系统、语言、时间等 */
+/** 底部设置区：主题、语言等 */
 export function SidebarMeta() {
   return (
-    <div className='space-y-3 text-[11px] text-neutral-500 px-4 mt-4'>
-      <div className='flex items-center justify-between gap-2'>
-        <span className='shrink-0'>主题</span>
-        <select
-          className='max-w-[9rem] cursor-pointer rounded-md border border-[color:var(--grid-border-color)] bg-white px-1.5 py-1 text-right text-[11px] text-neutral-800 outline-none'
-          defaultValue='system'
-          aria-label='主题'
-        >
-          <option value='system'>跟随系统</option>
-          <option value='light'>浅色</option>
-          <option value='dark'>深色</option>
-        </select>
+    <div className=''>
+      <div className='flex items-center justify-between gap-2 p-3'>
+        <span className='shrink-0 text-[11px] text-muted-foreground'>主题</span>
+        <ThemeSelect />
       </div>
-      <div className='flex items-center justify-between gap-2'>
-        <span className='shrink-0'>语言</span>
-        <select
-          className='max-w-[9rem] cursor-pointer rounded-md border border-[color:var(--grid-border-color)] bg-white px-1.5 py-1 text-right text-[11px] text-neutral-800 outline-none'
-          defaultValue='zh-CN'
-          aria-label='语言'
-        >
-          <option value='zh-CN'>简体中文</option>
-          <option value='en'>English</option>
-        </select>
-      </div>
-      <div className='border-t border-[color:var(--grid-border-color)] mx-[-16px] mb-2'></div>
-      <div className='flex items-center justify-between gap-2'>
-        <span className='font-mono text-[10px] uppercase tracking-wider text-neutral-400'>time</span>
-        <SidebarClock />
-      </div>
+      <div className='mx-[-16px] border-t border-grid-border' />
     </div>
   )
 }

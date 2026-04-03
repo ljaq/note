@@ -4,9 +4,9 @@ import { EMAIL, GITHUB_URL, PHONE, WECHAT_QR_SRC } from '@/lib/social'
 export function SiteFooter() {
   return (
     <ContentBleedSection bleed='top'>
-      <footer className='mt-auto px-4 py-4 md:px-8 lg:px-10'>
+      <footer className='mt-auto lg:px-3'>
         <div className='flex max-w-3xl flex-col gap-4 text-xs text-ink/45 md:flex-row md:items-center md:justify-between'>
-          <p className='font-mono tracking-wider'>© {new Date().getFullYear()} 李佳棋 · Next.js SSG / MDX</p>
+          <p className='font-mono text-[11px] h-8 flex items-center'>© {new Date().getFullYear()} 李佳棋 · Next.js SSG / MDX</p>
           {/* 小屏无侧栏：用内联链接与可展开的二维码，避免依赖 Popover */}
           <div className='flex flex-col gap-3 border-t border-[color:var(--grid-border-color)] pt-4 md:hidden'>
             <p className='text-[0.65rem] font-mono uppercase tracking-wider text-ink/40'>contact</p>

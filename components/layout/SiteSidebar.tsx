@@ -11,7 +11,6 @@ import { SocialSketchGrid } from './SocialSketchGrid'
 import { SidebarClock } from './SidebarClock'
 import { FolderTwoTone, HomeTwoTone, IdcardTwoTone, ProfileTwoTone } from '@ant-design/icons'
 import { SectionLabel } from '../ui'
-import { ThemeToggle } from '@/components/theme/ThemeToggle'
 
 const ICON_TONE_LIGHT: [string, string] = ['#171717', '#e8e8e8']
 const ICON_TONE_DARK: [string, string] = ['#e8e8e8', '#525252']
@@ -27,11 +26,10 @@ export function SiteSidebar() {
       className='relative z-30 hidden min-h-0 w-[260px] flex-col overflow-hidden border-x border-[color:var(--grid-border-color)] bg-[color:var(--site-bg)] md:fixed md:top-0 md:left-4 md:flex md:h-[100dvh] md:max-h-[100dvh] md:overflow-y-auto md:overscroll-y-none lg:left-[calc(50vw-28rem)]'
       aria-label='站点侧栏'
     >
-      <ThemeToggle className='absolute right-3 top-3 z-20' />
       <DiagonalHatch patternId='sidebar-hatch' />
       {/* 极轻点阵叠在斜线上 */}
       <div className='dot-grid-sidebar pointer-events-none absolute inset-0 z-[1] opacity-[0.35]' aria-hidden />
-      <div className='relative z-10 flex min-h-0 flex-1 flex-col overflow-y-auto pb-2 pt-10'>
+      <div className='relative z-10 flex min-h-0 flex-1 flex-col overflow-y-auto pt-10'>
         <SiteLogo />
 
         <SectionLabel className='mt-16'>navigation</SectionLabel>
@@ -53,6 +51,7 @@ export function SiteSidebar() {
 
         <SectionLabel>social</SectionLabel>
         <SocialSketchGrid />
+        <SidebarMeta />
         <SidebarClock />
       </div>
     </aside>

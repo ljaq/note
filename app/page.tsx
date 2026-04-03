@@ -26,7 +26,7 @@ export default function HomePage() {
             showCursor
             cursorCharacter='_'
             text={['Hello,', '我是', '李佳棋']}
-            textColors={['#000000', '#000000', '#e01e5a']}
+            textColors={['var(--ink)', 'var(--ink)', 'var(--accent-magenta)']}
           />
         </h1>
         <BleedRule />
