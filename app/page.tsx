@@ -31,7 +31,7 @@ export default function HomePage() {
         </h1>
         <BleedRule />
         <p className='mt-4 max-w-xl px-1 text-lg text-ink/80 text-pretty sm:text-justify'>
-          多年前端/全栈开发经验，具备独立负责大型项目、进行技术选型和架构设计的能力。
+          七年前端开发经验，具备独立负责大型项目、进行技术选型和架构设计的能力。现就职于掌阅科技，负责掌阅App核心开发及文字类小程序开发。
         </p>
         <div className='mt-8 flex flex-wrap gap-3 transform translate-y-px'>
           <Button href='/about' variant='primary'>
@@ -50,19 +50,27 @@ export default function HomePage() {
         <div className='grid gap-8 md:grid-cols-2'>
           <SketchFrame as='section'>
             <SectionLabel index='02'>ability</SectionLabel>
-            <h2 className='mt-3 text-2xl font-semibold tracking-tight text-ink'>你能写在这里</h2>
+            <h2 className='mt-3 text-2xl font-semibold tracking-tight text-ink'>技术栈</h2>
             <ul className='mt-4 space-y-2 text-ink/80'>
               <li className='flex gap-2'>
                 <span className='text-ink/40'>—</span>
-                前端工程与组件化设计系统
+                React / Vue2&3 / Next.js / Nuxt
               </li>
               <li className='flex gap-2'>
                 <span className='text-ink/40'>—</span>
-                Node / 边缘函数与预渲染策略
+                TypeScript / Node.js / MongoDB
               </li>
               <li className='flex gap-2'>
                 <span className='text-ink/40'>—</span>
-                与设计师协作的交付节奏
+                小程序开发（原生 / uni-app / Taro）
+              </li>
+              <li className='flex gap-2'>
+                <span className='text-ink/40'>—</span>
+                Three.js / Cesium.js / 高德地图 / 百度地图
+              </li>
+              <li className='flex gap-2'>
+                <span className='text-ink/40'>—</span>
+                Echarts / AntV 大屏可视化
               </li>
             </ul>
           </SketchFrame>

@@ -18,11 +18,13 @@ export default function ProjectsPage() {
       <ContentBleedSection bleed='both'>
         <SectionLabel>projects</SectionLabel>
         <h1 className='mt-4 break-words text-4xl font-semibold tracking-tight text-ink md:text-5xl'>项目</h1>
-        <p className='mt-4 max-w-xl text-ink/70'>每个项目对应 `content/projects` 下的一篇 MDX，可写长文与代码块。</p>
+        <p className='mt-4 max-w-xl text-ink/70'>
+          七年开发历程，涵盖政府项目、企业级应用、小程序开发、可视化大屏等多个领域。从0到1主导掌阅网页版开发，参与多个大型项目的核心功能实现。
+        </p>
 
-        <div className='mt-12 grid gap-8 md:grid-cols-2'>
+        <div className='mt-12 flex flex-col gap-6'>
           {projects.map(p => (
-            <SketchFrame key={p.slug} as='article'>
+            <SketchFrame key={p.slug} as='article' className='p-6'>
               <h2 className='text-2xl font-semibold tracking-tight text-ink'>
                 <Link
                   href={`/projects/${p.slug}`}
@@ -32,7 +34,7 @@ export default function ProjectsPage() {
                 </Link>
               </h2>
               <p className='mt-2 text-sm text-ink/50'>{p.date}</p>
-              <p className='mt-3 flex-1 leading-relaxed text-ink/75'>{p.description}</p>
+              <p className='mt-3 leading-relaxed text-ink/75'>{p.description}</p>
               {p.stack && p.stack.length > 0 ? (
                 <ul className='mt-4 flex flex-wrap gap-2'>
                   {p.stack.map(s => (
@@ -45,16 +47,6 @@ export default function ProjectsPage() {
                   ))}
                 </ul>
               ) : null}
-              <div className='mt-6 flex flex-wrap gap-2'>
-                <Button href={`/projects/${p.slug}`} variant='primary'>
-                  查看详情
-                </Button>
-                {p.link ? (
-                  <Button href={p.link} variant='outline'>
-                    外部链接
-                  </Button>
-                ) : null}
-              </div>
             </SketchFrame>
           ))}
         </div>
